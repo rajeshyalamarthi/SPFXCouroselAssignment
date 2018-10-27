@@ -138,7 +138,7 @@ export default class RajeshWebPart extends BaseClientSideWebPart<IRajeshWebPartP
          var id= $(this).attr("Id");
         // alert(id);
          var call = $.ajax({
-          url: curl + "/_api/web/lists/getByTitle('Managers Speaks')/Items/?$select= Id,ImageUrl,Subject,Description&$filter=(Id eq '"+id+"')",
+          url: curl + "/_api/web/lists/getByTitle('Managers Speaks')/Items/?$select= Id,ImageUrl,Subject,Description,Modified&$top=5&$orderby=Modified desc",
           type: "GET",
           dataType: "json",
           headers: {
